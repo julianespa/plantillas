@@ -1,0 +1,17 @@
+<a href="/">Form</a>
+<div id="product-container">
+    <table>
+        <thead>  
+            <td>Title</td>
+            <td>Price</td>
+            <td>Image</td>
+        </thead>
+        {{#each products}}
+        <tr>
+            <td>{{this.title}} </td>
+            <td>${{this.price}} </td>
+            <td><img src="{{this.thumbnail}}" alt="imagen "+{{this.title}}>  </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
