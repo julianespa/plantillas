@@ -1,0 +1,19 @@
+html 
+    head 
+        link(rel="stylesheet", href="style.css")
+        title Plantilla PUG 
+    body 
+        h1 pug
+        #product-container
+            table 
+                thead 
+                    td Title 
+                    td Price 
+                    td Image 
+                each product in products 
+                    tr 
+                        td=product.title
+                        td=product.price
+                        td 
+                            img(src=product.thumbnail, alt=product.title)
+        a(href="/") Form
