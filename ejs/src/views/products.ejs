@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="product-container">
+    <h1>EJS</h1>
+    <table>
+        <thead>  
+            <td>Title</td>
+            <td>Price</td>
+            <td>Image</td>
+        </thead>
+        <% products.forEach(product => { %>
+            <tr>
+                <td><%=product.title %>  </td>
+                <td><%= product.price %>  </td>
+                <td><img src="<%= product.thumbnail %> " alt="imagen "+<%= product.name %> >  </td>
+            </tr> 
+        <% }) %>        
+    </table>
+    <a href="/">Form</a>
+</div>
