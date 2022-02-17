@@ -5,15 +5,18 @@ html
     body 
         h1 pug
         #product-container
-            table 
-                thead 
-                    td Title 
-                    td Price 
-                    td Image 
-                each product in products 
-                    tr 
-                        td=product.title
-                        td=product.price
-                        td 
-                            img(src=product.thumbnail, alt=product.title)
+            if products
+                table 
+                    thead 
+                        td Title 
+                        td Price 
+                        td Image 
+                    each product in products 
+                        tr 
+                            td=product.title
+                            td=product.price
+                            td 
+                                img(src=product.thumbnail, alt=product.title)
+            else 
+                h2 No products
         a(href="/") Form
